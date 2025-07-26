@@ -10,15 +10,14 @@ const About = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-{/* Profile Picture with Clean Professional Ring */}
-<div className="w-36 h-36 mx-auto mb-6 rounded-full bg-gray-800 p-1 shadow-lg ring-4 ring-green-500/70">
-  <img
-    src={profile}
-    alt="Mashood"
-    className="w-full h-full object-cover rounded-full border-4 border-white"
-  />
-</div>
-
+      {/* Profile Picture with Hover Ring Effect */}
+      <div className="group w-36 h-36 mx-auto mb-6 rounded-full bg-gray-800 p-1 shadow-lg ring-4 ring-green-500/70 hover:ring-green-400 transition-all duration-300 ease-in-out hover:scale-105">
+        <img
+          src={profile}
+          alt="Mashood"
+          className="w-full h-full object-cover rounded-full border-4 border-white group-hover:border-green-400 transition-all duration-300"
+        />
+      </div>
 
       {/* About Text */}
       <h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2">
