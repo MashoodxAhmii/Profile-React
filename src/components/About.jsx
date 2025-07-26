@@ -10,12 +10,15 @@ const About = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      {/* Profile Picture with Hover Ring Effect */}
-      <div className="group w-36 h-36 mx-auto mb-6 rounded-full bg-gray-800 p-1 shadow-lg ring-4 ring-green-500/70 hover:ring-green-400 transition-all duration-300 ease-in-out hover:scale-105">
+      {/* Profile Picture with Grainy Green Hover Effect */}
+      <div className="relative w-36 h-36 mx-auto mb-6 rounded-full p-1 shadow-lg ring-4 ring-green-500/70 overflow-hidden group">
+        {/* Grain background */}
+        <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 bg-green-600 bg-[url('https://www.transparenttextures.com/patterns/black-paper.png')] mix-blend-overlay transition-opacity duration-500 z-0"></div>
+
         <img
           src={profile}
           alt="Mashood"
-          className="w-full h-full object-cover rounded-full border-4 border-white group-hover:border-green-400 transition-all duration-300"
+          className="relative w-full h-full object-cover rounded-full border-4 border-white z-10"
         />
       </div>
 
