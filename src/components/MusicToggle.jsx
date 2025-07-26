@@ -16,12 +16,12 @@ const MusicToggle = () => {
   };
 
   useEffect(() => {
-    audioRef.current.volume = 0.3; // optional: set default volume
+    audioRef.current.volume = 0.2; // optional: set default volume
   }, []);
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      <audio ref={audioRef} src="/background.mp3" loop />
+      <audio ref={audioRef} src="/intro.mp3" loop />
       <button
         onClick={toggleMusic}
         className="bg-gray-200 dark:bg-gray-700 p-3 rounded-full shadow-md hover:scale-110 transition"
